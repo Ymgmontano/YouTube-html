@@ -1,0 +1,673 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; /* Añade esta línea para fijar la posición en la parte superior */
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.header .logo-bar {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo-bar .nav-bar {
+    width: 24px;
+}
+
+.header .logo-bar .logo {
+    display: inline-block;
+    width: 120px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.header .container-nav {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header .container-nav:hover {
+    background: #f2f2f2;
+}
+
+.header .center {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .center .container-search {
+    width: 100%;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.header .center .container-search .icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.header .center .container-search .icono img {
+    width: 22px;
+    height: 22px;
+}
+
+.header .center .container-search input {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    outline: none;
+}
+
+
+.header .center .container-search .button-search {
+    width: 70px;
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #ccc;
+}
+
+.header .center .container-search .button-search:hover {
+    background: #f2f2f2;
+}
+
+.header .center .container-search .button-search img {
+    width: 24px;
+}
+
+.header .center .container-micro {
+    max-width: 40px;
+    width: 100% !important;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.header .center .container-micro:hover {
+    background: #f2f2f2;
+}
+
+.header .end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .end .item-end {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.header .end .item-end:hover {
+    background: #f2f2f2;
+}
+
+.header .end .item-end img {
+    width: 24px;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.header .end img:hover {
+    background: #f2f2f2;
+}
+
+.header .end .logo-canal {
+    width: 32px;
+    cursor: pointer;
+}
+
+/* ********************** */
+/* SECCCION BARRA LATERAL */
+/* ********************** */
+.bar-lateral {
+    position: fixed;
+    top: 0px;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+    width: 240px;
+    padding-top: 80px;
+    left: 10px;
+
+}
+
+.bar-lateral .options {
+    list-style: none;
+}
+
+.bar-lateral .options li a img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 24px;
+}
+
+.bar-lateral .options li a {
+    font-size: 14px;
+    color: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.bar-lateral .options li a:hover {
+    background-color: #f2f2f2;
+}
+
+.bar-lateral hr {
+    margin: 12px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.bar-lateral h3 {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 6px 12px 4px;
+}
+
+.bar-lateral #subscriptions li a img {
+    display: block;
+    border-radius: 50%;
+}
+
+.bar-lateral .links {
+    margin-bottom: 20px;
+}
+
+.bar-lateral .links a {
+    color: #606060;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.bar-lateral .google {
+    display: block;
+    font-size: 12px;
+    color: #909090;
+    padding: 24px 0;
+}
+
+.little-menu {
+    display: flex;
+}
+
+.little-menu li a {
+    display: block !important;
+    font-size: 10px !important;
+    padding: 10px 0 !important;
+    position: relative;
+    margin-left: 0px !important;
+}
+
+.little-menu li a img {
+    margin-left: 20px !important;
+    text-align: center;
+}
+
+.little-menu li a .text {
+    display: block;
+    text-align: center;
+}
+
+.little-menu li {
+    margin-bottom: 10px;
+}
+
+/* ********************** */
+/* SECCION VIDEOS */
+/* ********************** */
+.videos {
+    position: relative;
+    top: 100px;
+    margin-left: 300px;
+    padding-right: 20px;
+    /* seccion grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 50px;
+}
+
+.videos .container-item {
+    position: relative;
+    background-color: #fff !important;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.videos .container-item .item {
+    position: absolute;
+    max-width: 360px;
+    background-color: #fff;
+    transition: .3s;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s;
+
+}
+
+.videos .item .img-container {
+    position: relative;
+}
+
+.videos .item .img-container img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.videos .item .img-container .time {
+    position: absolute;
+    color: #fff;
+    bottom: 10px;
+    right: 10px;
+    display: block;
+    width: fit-content;
+    background: #000;
+    padding: 2px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.videos .item .row {
+    display: flex;
+    margin-top: 10px;
+}
+
+.videos .item .row .img-channel img {
+    width: 36px;
+    margin-right: 12px;
+}
+
+.videos .item .row .col .info h3 a {
+    text-decoration: none;
+    color: #0f0f0f;
+}
+
+.videos .item .row .col .info h3 {
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.videos .item .row .col .info .name-channel {
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: #606060;
+    margin-bottom: 4px;
+}
+
+.videos .item .row .col .info .metadata {
+    font-size: 14px;
+    color: #606060;
+}
+
+.videos .item .buttons-video {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    /* margin: 10px 0; */
+    display: none;
+    top: 10px;
+    background-color: #fff;
+    padding: 0;
+    z-index: 10;
+}
+
+.videos .item .buttons-video img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.videos .item .buttons-video button {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* clases que se agregan dinámicamente mediante Javascript */
+.on-hover {
+    scale: 1.2;
+    border: 1px solid #666;
+    border-radius: 20px;
+    z-index: 100;
+    height: 380px !important;
+    /* width: 200% !important; */
+
+}
+
+.videos .on-hover:hover .buttons-video {
+    display: flex;
+}
+
+.ocultar {
+    display: none !important;
+    margin-right: -300% !important;
+    transition: .3s;
+}
+
+.aparecer {
+    margin-right: 0;
+    transition: .3s;
+}
+
+
+.max-width-videos {
+    margin-left: 120px;
+}
+
+.is-mode-overlay {
+    width: 240px !important;
+    position: absolute !important;
+    z-index: 500 !important;
+}
+
+
+
+.container {
+    position: relative;
+    width: 450px;
+    height: 650px;
+    display: flex;
+}
+
+.container .videoBx {
+    position: relative;
+    width: calc(100% - 70px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.container .videoBx video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container .videoBx .controls {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#28212977, transparent);
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .videoBx:hover .controls {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container .videoBx .controls .videoIcon {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.container .videoBx .controls .videoIcon i {
+    color: #000000;
+}
+
+.container .videoBx .controls .videoIcon i:last-child {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .videoBx .controls .videoIcon.play.active i:first-child,
+.container .videoBx .controls .videoIcon.mute.active i:first-child {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .videoBx .controls .videoIcon.play.active i:last-child,
+.container .videoBx .controls .videoIcon.mute.active i:last-child {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container .videoBx .content {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container .videoBx .content .text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .videoBx .content .text h5 {
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.container .videoBx .content .detail {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .videoBx .content .detail .imgBx {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container .videoBx .content .detail .imgBx .img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.container .videoBx .content .detail .imgBx .img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.container .videoBx .content .detail .imgBx h4 {
+    position: relative;
+    color: #000000;
+    white-space: nowrap;
+    font-weight: 500;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.container .videoBx .content .detail .imgBx h4 span {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background: rgba(119, 119, 119, .9);
+    color: #000000;
+    border-radius: 5px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 35px;
+    display: none;
+}
+
+.container .videoBx .content .detail .imgBx h4:hover span {
+    display: block;
+}
+
+.container .videoBx .content .detail .btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container .videoBx .content .detail .btn button {
+    position: relative;
+    width: 110px;
+    height: 35px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.container .videoBx .centerPlayPause {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    width: 100%;
+    height: 450px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .videoBx .centerPlayPause li {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background: #282129;
+    border-radius: 50%;
+    border: 1px solid rgba(119, 119, 119, .9);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .videoBx .centerPlayPause li i {
+    color: #000000;
+    font-size: 2em;
+}
+
+.container .videoBx .centerPlayPause li.first {
+    position: absolute;
+}
+
+.container .videoBx .centerPlayPause li.first.active {
+    animation: animRipples .5s ease;
+}
+
+.container .videoBx .centerPlayPause li.second.active {
+    animation: animRipples .5s ease;
+}
+
+@keyframes animRipples {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Esto centrará el texto dentro de los elementos */
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+}
